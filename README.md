@@ -1,2 +1,2 @@
-FizzBuzzUpd-Team-1
+FizzBuzz-Team-1
 ================

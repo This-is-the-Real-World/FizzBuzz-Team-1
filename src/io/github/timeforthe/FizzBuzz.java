@@ -1,9 +1,9 @@
 package io.github.timeforthe;
 
-import java.io.File;
 import sun.audio.AudioPlayer;
 import sun.audio.AudioStream;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
@@ -14,7 +14,7 @@ public class FizzBuzz {
     public static ScheduledThreadPoolExecutor eventPool = new ScheduledThreadPoolExecutor(5);
     static File Fizz;
     static File Bang;
-    static File directory = new File ("");
+    static File directory = new File(System.getProperty("user.dir") + "/AudioFiles");
 
     public static void main(String[] args) {
 
@@ -76,7 +76,7 @@ public class FizzBuzz {
         @Override
         public void run() {
             try {
-                AudioPlayer.player.start(new AudioStream( new FileInputStream(audioFile)));
+                AudioPlayer.player.start(new AudioStream(new FileInputStream(audioFile)));
             } catch (IOException e) {
                 System.out.println("File not found : " + audioFile);
             }

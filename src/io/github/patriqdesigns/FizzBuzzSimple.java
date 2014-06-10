@@ -7,7 +7,7 @@ package io.github.patriqdesigns;
  * Date: 04/06/2014
  * Time: 20:54
  */
-public class FizzBuzzPatriq {
+public class FizzBuzzSimple {
 
     public static void main(String[] args) {// main method
 

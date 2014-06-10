@@ -20,7 +20,7 @@ public class FizzBuzzComplex {
             Method e = FizzBuzzSuper.FizzBuzz.class.getDeclaredMethod("evaluate", int.class);
             //sets the method accessible since he is protected and we can't access it from here
             e.setAccessible(true);
-            //loops thought all of the numbers from 1 to 1000
+            //loops through all of the numbers from 1 to 1000
             for(int i = 1; i <= 1000; i++){
                 //invokes the evaluate method from fizzBuzz instance and prints it out with the following i
                 System.out.println(e.invoke(fizzBuzz, i).toString().concat(String.valueOf(i)));

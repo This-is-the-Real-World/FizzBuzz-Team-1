@@ -5,6 +5,15 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * ADDED SOME NOTES * BY RAKEYJAKEY*
+ *
+ * 1. Not needed static variables.
+ * 2. I don't think the LAF is really necessary in this case, but adding it is fine.
+ * 3. Fizzbuzz numbers are also fizz and buzz numbers so you can either specify that it fizz and buzz counts exclude them or add them too.
+ * 4. Learn to use lambdas to neaten up ActionListeners. I have put an example at the bottom.
+ *
+ */
 public class ComplexTask {
 
     private static int fizz, buzz, fizzBuzz, num = 0;
@@ -35,6 +44,10 @@ public class ComplexTask {
             } else if ((i % 5 == 0)) {
                 buzz++;
                 Gui.buzzModel.add(Gui.buzzModel.getSize(), i);
+
+                /*
+                Could have used else here instead of else if.
+                 */
             } else if ((i % 3 != 0) || (i % 5 != 0)) {
                 num++;
             }
@@ -84,6 +97,13 @@ public class ComplexTask {
             }
 
         });
+
+        /* LAMBDA EXAMPLE EG. THIS COULD REPLACE exit.addActionListener.
+             e is just the name of the ActionEvent variable. It can be anything but I like to use e.
+
+         exit.addActionListener(e -> System.exit(0));
+
+         */
 
     }
 
